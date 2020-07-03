@@ -1,0 +1,20 @@
+{
+  "name": "tweetbook",
+  "version": "0.1.0",
+  "bin": {
+    "tweetbook": "bin/tweetbook.js"
+  },
+  "scripts": {
+    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "cdk": "cdk",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.49.1",
+    "aws-cdk": "1.49.1",
+    "jest": "^25.5.0"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "1.49.1"
+  }
+}
