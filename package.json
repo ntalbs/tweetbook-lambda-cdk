@@ -12,7 +12,7 @@
   "devDependencies": {
     "@aws-cdk/assert": "1.49.1",
     "aws-cdk": "1.49.1",
-    "jest": "^25.5.0"
+    "jest": "^26.1.0"
   },
   "dependencies": {
     "@aws-cdk/aws-dynamodb": "^1.49.1",
