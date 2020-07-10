@@ -35,7 +35,7 @@ async function getQuote(id) {
     Key: {
       "_id": id
     },
-    TableName: "BookQuotes"
+    TableName: "Tweetbook-Quotes"
   }
 
   let q = await dynamodb.get(param).promise()
