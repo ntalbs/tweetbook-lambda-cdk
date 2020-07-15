@@ -20,6 +20,7 @@
     "jest": "^26.1.0"
   },
   "dependencies": {
+    "lodash": ">=4.17.19",
     "@aws-cdk/assets": "^1.51.0",
     "@aws-cdk/aws-apigateway": "^1.51.0",
     "@aws-cdk/aws-apigatewayv2": "^1.51.0",
