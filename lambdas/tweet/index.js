@@ -33,7 +33,7 @@ function random() {
 async function getQuote(id) {
   let param = {
     Key: {
-      "_id": id
+      "id": id
     },
     TableName: "Tweetbook-Quotes"
   }
