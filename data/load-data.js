@@ -13,12 +13,13 @@ const dynamodb = new aws.DynamoDB.DocumentClient({
   }
 });
 
-for (let i = 0; i < data.length; i++) {
+let i = 0
+data.forEach(e => {
   let params = {
     Item: {
-      '_id': i,
-      'msg': data[i].msg,
-      'src': data[i].src
+      'id': i++,
+      'msg': e.msg,
+      'src': e.src
     },
     TableName: 'Tweetbook-Quotes'
   }
@@ -27,7 +28,7 @@ for (let i = 0; i < data.length; i++) {
     if (e) {
       console.log(e, e.stack)
     } else {
-      console.log(i, '/', data.length)
+      console.log(i.length)
     }
   })
-}
+})
