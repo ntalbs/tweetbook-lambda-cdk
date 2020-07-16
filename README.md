@@ -1,12 +1,7 @@
-# Welcome to your CDK JavaScript project!
+# Tweetbook Lambda
 
-This is a blank project for JavaScript development with CDK.
+This is a toy project to learn and practice AWS and AWS-CDK. It creates an AWS stack which contains Lambda functions, DynamoDB table, EventBridge, and Secrets Manager. The main function is to read a message from DynamoDB and tweet it periodically.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app. The build step is not required when using JavaScript.
-
-## Useful commands
-
- * `npm run test`         perform the jest unit tests
- * `cdk deploy`           deploy this stack to your default AWS account/region
- * `cdk diff`             compare deployed stack with current state
- * `cdk synth`            emits the synthesized CloudFormation template
+<p align="center">
+    <img src="images/lambda.png" align="center">
+</p>
