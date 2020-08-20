@@ -15,22 +15,22 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@aws-cdk/assert": "1.59.0",
-    "aws-cdk": "1.59.0",
-    "jest": "^26.4.0"
+    "@aws-cdk/assert": "1.60.0",
+    "aws-cdk": "1.60.0",
+    "jest": "^26.4.1"
   },
   "dependencies": {
     "lodash": ">=4.17.20",
-    "@aws-cdk/assets": "^1.59.0",
-    "@aws-cdk/aws-apigateway": "^1.59.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.59.0",
-    "@aws-cdk/aws-certificatemanager": "^1.59.0",
-    "@aws-cdk/aws-dynamodb": "^1.59.0",
-    "@aws-cdk/aws-events": "^1.59.0",
-    "@aws-cdk/aws-events-targets": "^1.59.0",
-    "@aws-cdk/aws-lambda": "^1.59.0",
-    "@aws-cdk/aws-s3": "^1.59.0",
-    "@aws-cdk/aws-s3-deployment": "^1.59.0",
-    "@aws-cdk/core": "^1.59.0"
+    "@aws-cdk/assets": "^1.60.0",
+    "@aws-cdk/aws-apigateway": "^1.60.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.60.0",
+    "@aws-cdk/aws-certificatemanager": "^1.60.0",
+    "@aws-cdk/aws-dynamodb": "^1.60.0",
+    "@aws-cdk/aws-events": "^1.60.0",
+    "@aws-cdk/aws-events-targets": "^1.60.0",
+    "@aws-cdk/aws-lambda": "^1.60.0",
+    "@aws-cdk/aws-s3": "^1.60.0",
+    "@aws-cdk/aws-s3-deployment": "^1.60.0",
+    "@aws-cdk/core": "^1.60.0"
   }
 }
