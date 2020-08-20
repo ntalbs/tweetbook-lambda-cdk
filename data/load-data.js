@@ -1,5 +1,6 @@
-const aws = require('aws-sdk')
-const fs  = require('fs')
+const aws  = require('aws-sdk')
+const fs   = require('fs')
+const {v4: uuidv4} = require('uuid')
 
 const data = JSON.parse(fs.readFileSync('./data.json'))
 
@@ -13,22 +14,27 @@ const dynamodb = new aws.DynamoDB.DocumentClient({
   }
 });
 
-let i = 0
 data.forEach(e => {
+
+  let uuid = uuidv4()
+  let p = uuid.indexOf('-')
+  let a = uuid.substring(0, p)
+  let b = uuid.substring(p)
   let params = {
     Item: {
-      'id': i++,
+      'msb': a,
+      'lsb': b,
       'msg': e.msg,
       'src': e.src
     },
-    TableName: 'Tweetbook-Quotes'
+    TableName: 'Quotes'
   }
 
   dynamodb.put(params, (e, d) => {
     if (e) {
       console.log(e, e.stack)
     } else {
-      console.log(i.length)
+      console.log(">>>OK>>>", params)
     }
   })
 })
