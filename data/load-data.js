@@ -1,7 +1,7 @@
 const aws = require('aws-sdk')
 const fs  = require('fs')
 
-const data = JSON.parse(fs.readFileSync('./data.json'))
+const quotes = JSON.parse(fs.readFileSync('./data.json'))
 
 aws.config.update({
   region: "eu-west-1"
@@ -14,7 +14,7 @@ const dynamodb = new aws.DynamoDB.DocumentClient({
 });
 
 let i = 0
-data.forEach(e => {
+for (const e of quotes) {
   let params = {
     Item: {
       'id': i++,
@@ -24,11 +24,11 @@ data.forEach(e => {
     TableName: 'Tweetbook-Quotes'
   }
 
-  dynamodb.put(params, (e, d) => {
-    if (e) {
-      console.log(e, e.stack)
+  dynamodb.put(params, (err, data) => {
+    if (err) {
+      console.log(err, err.stack)
     } else {
-      console.log(i.length)
+      console.log(params.Item, '/', quotes.length)
     }
   })
-})
+}
